@@ -30,14 +30,15 @@ namespace lab2
                 switch (comboBox1.SelectedItem.ToString())
                 {
                     case "Arial":
-                        ftype = "(s218T";
+                        ftype = "(s16602T";
                         break;
                     case "Courier":
-                        ftype = "(s3T";
+                        ftype = "(s4099T";
                         break;
                     default:
                         break;
                 }
+
             }
             return ftype;
         }
@@ -69,7 +70,7 @@ namespace lab2
                         fcolor = "*v2S";
                         break;
                     case "Niebieski":
-                        fcolor = "*v12S";
+                        fcolor = "*v4S";
                         break;
                     default:
                         break;
@@ -98,12 +99,7 @@ namespace lab2
             writer.WriteLine("\x1B" + Font_type());
 
             //chosing the font size
-
             writer.WriteLine("\x1B" + "(s" + Font_size() + "V");
-
-            //chosing the font color
-            writer.WriteLine("\x1B" + "*r3U");
-            writer.WriteLine("\x1B" + Font_color());
 
             //bold
             if (checkBox1.Checked)
@@ -121,7 +117,12 @@ namespace lab2
                 writer.WriteLine("\x1B" + "&d0D");
             }
 
+            //chosing the font color
+            //simple color mode - 3 planes, RGB
+            writer.WriteLine("\x1B" + "*r3U");
+            writer.WriteLine("\x1B" + Font_color());
 
+    
             if (text.Equals(""))
                 return false;
 
@@ -133,7 +134,7 @@ namespace lab2
             return true;
         }
 
-        public bool PrintRaster()
+        public void PrintRaster()
         {
             string path = @".\file";
             FileStream file = File.Create(path);
@@ -145,21 +146,24 @@ namespace lab2
             writer.WriteLine("\x1B" + "*r-3U");
 
             //Start raster 
-            writer.WriteLine("\x1B" + "r0A");
+            writer.WriteLine("\x1B" + "*r1A");
 
             //Compression method. 1 = Run-length encoding. Requies byte pairs.
-            writer.WriteLine("\x1B" + "b1M");
+            writer.WriteLine("\x1B" + "*b1m");
 
+            //simple 3 plane color graphics PCL ﬁle output that prints CMY colors
+            //cyan data
+            writer.WriteLine("\x1B" + "*b16V" + "\x08" + "\xFF" + "\x08" + "\x00" + "\x08" + "\x00" + "\x08" + "\x00" + "\x08" + "\xFF" + "\x08" + "\x00" + "\x08" + "\xff" + "\x08" + "\xff");
+            //magenta data
+            writer.WriteLine("\x1B" + "*b16V" + "\x08" + "\x00" + "\x08" + "\xFF" + "\x08" + "\x00" + "\x08" + "\x00" + "\x08" + "\xff" + "\x08" + "\xff" + "\x08" + "\x00" + "\x08" + "\xff");
+            //yellow data
+            writer.WriteLine("\x1B" + "*b16W" + "\x08" + "\x00" + "\x08" + "\x00" + "\x08" + "\xff" + "\x08" + "\x00" + "\x08" + "\xff" + "\x08" + "\xff" + "\x08" + "\xff" + "\x08" + "\x00");
 
-
-
-
-
+            //end raster
+            writer.WriteLine("\x1B" + "*rC");
             writer.WriteLine("\x1B" + "E");
             writer.Close();
             File.Copy(path, "LPT3");
-
-            return true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -168,39 +172,26 @@ namespace lab2
                 MessageBox.Show("Nie udalo sie");
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            PrintRaster();     
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
 
-        }
+            string path = @".\image.png";
+            System.Drawing.Image img = System.Drawing.Image.FromFile(path);
+            Point location = new Point(100, 100);
+            e.Graphics.DrawImage(img, location);
 
-        private void label3_Click(object sender, EventArgs e)
+        }
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            var printDocument = new PrintDocument();
+            printDocument.PrintPage += printDocument1_PrintPage;
+            printDocument.Print();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
