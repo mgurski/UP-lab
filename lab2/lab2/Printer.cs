@@ -23,17 +23,17 @@ namespace lab2
         }
         public string Font_type()
         {
-            string ftype = " ";
+            string ftype = "(s1p" + Font_size() + "v0s0b1419T";
 
             if (comboBox1.SelectedItem != null)
             {
                 switch (comboBox1.SelectedItem.ToString())
                 {
                     case "Arial":
-                        ftype = "(s16602T";
+                        ftype = "(s1p" + Font_size() + "v4s0b16602T";
                         break;
                     case "Courier":
-                        ftype = "(s4099T";
+                        ftype = "(s1p" + Font_size() + "v0s0b4099T";
                         break;
                     default:
                         break;
@@ -98,9 +98,6 @@ namespace lab2
             //chosing the font type
             writer.WriteLine("\x1B" + Font_type());
 
-            //chosing the font size
-            writer.WriteLine("\x1B" + "(s" + Font_size() + "V");
-
             //bold
             if (checkBox1.Checked)
             {
@@ -143,7 +140,15 @@ namespace lab2
             writer.WriteLine("\x1B" + "E");
 
             //Simple color mode, -3 = 3 plates, CMY palette. 3 = 3 plates, RGB palette.
-            writer.WriteLine("\x1B" + "*r-3U");
+            if (comboBox4.SelectedItem.ToString() == "RGB")
+            {
+                writer.WriteLine("\x1B" + "*r3U");
+
+            }
+            else
+            {
+                writer.WriteLine("\x1B" + "*r-3U");
+            }
 
             //Start raster 
             writer.WriteLine("\x1B" + "*r1A");
