@@ -1,0 +1,12 @@
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\bin\Debug\UP3.exe.config
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\bin\Debug\UP3.exe
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\bin\Debug\UP3.pdb
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\bin\Debug\EasyModbus.dll
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.csprojAssemblyReference.cache
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.Form1.resources
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.Properties.Resources.resources
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.csproj.GenerateResource.cache
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.csproj.CoreCompileInputs.cache
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.csproj.CopyComplete
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.exe
+C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.pdb
