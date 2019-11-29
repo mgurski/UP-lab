@@ -17,10 +17,6 @@ namespace UP3
         public Form1()
         {
             InitializeComponent();
-            //modbusClient.Baudrate = 9600;	// Not necessary since default baudrate = 9600
-            //modbusClient.Parity = System.IO.Ports.Parity.None;
-            //modbusClient.StopBits = System.IO.Ports.StopBits.Two;
-            //modbusClient.ConnectionTimeout = 500;
             progressBarValue.Minimum = 0;
             progressBarValue.Maximum = 500;
         }
@@ -67,16 +63,26 @@ namespace UP3
             else
                 MessageBox.Show("Cannot disconect");
         }
-
+        //169.254.2.10
         private void timerRead_Tick(object sender, EventArgs e)
         {
             timerRead.Enabled = false;
-
-            modbusClient.WriteMultipleCoils(4, new bool[] { true, true, true, true, true, true, true, true, true, true });    //Write Coils starting with Address 5
-            bool[] readCoils = modbusClient.ReadCoils(9, 10);                        //Read 10 Coils from Server, starting with address 10
-            int[] readHoldingRegisters = modbusClient.ReadHoldingRegisters(0, 10);    //Read 10 Holding Registers from Server, starting with Address 1
-
-            progressBarValue.Value = readHoldingRegisters[0];
+            textBox1.Text = "";
+            int[] current;
+            int[] voltage;
+            int[] power;
+            int[] apppower;
+            int[] reactpower;
+            voltage = modbusClient.ReadHoldingRegisters(4164, 2);
+            current = modbusClient.ReadHoldingRegisters(4112, 2);
+            power = modbusClient.ReadHoldingRegisters(4144, 2);
+            apppower = modbusClient.ReadHoldingRegisters(4136, 2);
+            reactpower = modbusClient.ReadHoldingRegisters(4152, 2);
+            textBox1.Text = "Voltage: " + voltage[1].ToString() + "[V]  Current: 0." + current[1].ToString() + "[A]";
+            textBox2.Text = "Power: 0. " + power[1].ToString() + "[kW]  Apparent Power: 0." + apppower[1].ToString() + "[kVA]";
+            textBox3.Text = "Reactive Power: " + (reactpower[1]/1000.0).ToString() + "kvar";
+            progressBarValue.Value = voltage[1];
+            labelValue.Text = voltage[1].ToString();
             progressBarValue.Refresh();
 
             timerRead.Enabled = true;

@@ -10,3 +10,15 @@ C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.csproj.CoreCompileIn
 C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.csproj.CopyComplete
 C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.exe
 C:\Users\arkadiusz.cichy\source\repos\UP3\UP3\obj\Debug\UP3.pdb
+C:\Users\lab\Desktop\UP3\UP3\bin\Debug\UP3.exe.config
+C:\Users\lab\Desktop\UP3\UP3\bin\Debug\UP3.exe
+C:\Users\lab\Desktop\UP3\UP3\bin\Debug\UP3.pdb
+C:\Users\lab\Desktop\UP3\UP3\bin\Debug\EasyModbus.dll
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.csprojAssemblyReference.cache
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.Form1.resources
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.Properties.Resources.resources
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.csproj.GenerateResource.cache
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.csproj.CoreCompileInputs.cache
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.csproj.CopyComplete
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.exe
+C:\Users\lab\Desktop\UP3\UP3\obj\Debug\UP3.pdb

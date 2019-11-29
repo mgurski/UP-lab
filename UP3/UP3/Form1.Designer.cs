@@ -37,29 +37,35 @@
             this.labelValueText = new System.Windows.Forms.Label();
             this.progressBarValue = new System.Windows.Forms.ProgressBar();
             this.labelValue = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxIP
             // 
-            this.textBoxIP.Location = new System.Drawing.Point(12, 40);
+            this.textBoxIP.Location = new System.Drawing.Point(18, 62);
+            this.textBoxIP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxIP.Name = "textBoxIP";
-            this.textBoxIP.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIP.Size = new System.Drawing.Size(148, 26);
             this.textBoxIP.TabIndex = 0;
             // 
             // labelIP
             // 
             this.labelIP.AutoSize = true;
-            this.labelIP.Location = new System.Drawing.Point(12, 14);
+            this.labelIP.Location = new System.Drawing.Point(18, 22);
+            this.labelIP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelIP.Name = "labelIP";
-            this.labelIP.Size = new System.Drawing.Size(47, 13);
+            this.labelIP.Size = new System.Drawing.Size(70, 20);
             this.labelIP.TabIndex = 1;
             this.labelIP.Text = "Adres IP";
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(142, 9);
+            this.buttonConnect.Location = new System.Drawing.Point(281, 15);
+            this.buttonConnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(75, 23);
+            this.buttonConnect.Size = new System.Drawing.Size(112, 35);
             this.buttonConnect.TabIndex = 2;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = true;
@@ -67,9 +73,10 @@
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(142, 38);
+            this.buttonDisconnect.Location = new System.Drawing.Point(281, 59);
+            this.buttonDisconnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDisconnect.Name = "buttonDisconnect";
-            this.buttonDisconnect.Size = new System.Drawing.Size(75, 23);
+            this.buttonDisconnect.Size = new System.Drawing.Size(112, 35);
             this.buttonDisconnect.TabIndex = 3;
             this.buttonDisconnect.Text = "Disconnect";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
@@ -83,33 +90,60 @@
             // labelValueText
             // 
             this.labelValueText.AutoSize = true;
-            this.labelValueText.Location = new System.Drawing.Point(50, 86);
+            this.labelValueText.Location = new System.Drawing.Point(136, 132);
+            this.labelValueText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelValueText.Name = "labelValueText";
-            this.labelValueText.Size = new System.Drawing.Size(50, 13);
+            this.labelValueText.Size = new System.Drawing.Size(72, 20);
             this.labelValueText.TabIndex = 4;
             this.labelValueText.Text = "Wartość:";
             // 
             // progressBarValue
             // 
-            this.progressBarValue.Location = new System.Drawing.Point(15, 102);
+            this.progressBarValue.Location = new System.Drawing.Point(22, 157);
+            this.progressBarValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBarValue.Name = "progressBarValue";
-            this.progressBarValue.Size = new System.Drawing.Size(202, 23);
+            this.progressBarValue.Size = new System.Drawing.Size(371, 35);
             this.progressBarValue.TabIndex = 5;
             // 
             // labelValue
             // 
             this.labelValue.AutoSize = true;
-            this.labelValue.Location = new System.Drawing.Point(139, 86);
+            this.labelValue.Location = new System.Drawing.Point(269, 132);
+            this.labelValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelValue.Name = "labelValue";
-            this.labelValue.Size = new System.Drawing.Size(13, 13);
+            this.labelValue.Size = new System.Drawing.Size(18, 20);
             this.labelValue.TabIndex = 6;
             this.labelValue.Text = "0";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 200);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(381, 26);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(12, 235);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(381, 26);
+            this.textBox2.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 267);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(381, 26);
+            this.textBox3.TabIndex = 9;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 140);
+            this.ClientSize = new System.Drawing.Size(405, 311);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelValue);
             this.Controls.Add(this.progressBarValue);
             this.Controls.Add(this.labelValueText);
@@ -117,6 +151,7 @@
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.labelIP);
             this.Controls.Add(this.textBoxIP);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Disconnected";
             this.ResumeLayout(false);
@@ -134,6 +169,9 @@
         private System.Windows.Forms.Label labelValueText;
         private System.Windows.Forms.ProgressBar progressBarValue;
         private System.Windows.Forms.Label labelValue;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
