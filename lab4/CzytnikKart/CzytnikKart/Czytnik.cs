@@ -49,11 +49,12 @@ namespace CzytnikKart
             {
                 richTextBox1.AppendText("Response in ascii : \n");
                 richTextBox1.AppendText(System.Text.Encoding.ASCII.GetString(response).ToString());
+                ConvertToAscii(response);
             }
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Connect_Click(object sender, EventArgs e)
         {
             //creating the context
             context = new SCardContext();
@@ -92,13 +93,21 @@ namespace CzytnikKart
             }
             
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void Disconnect_Click(object sender, EventArgs e)
         {
             if (reader.IsConnected)
             {
                 reader.Disconnect(SCardReaderDisposition.Leave);
                 label1.Text = "Not connected";
             }
+        }
+
+        private void ConvertToAscii(byte[] data)
+        {
+            data = data.Skip(24).Where(x => x != 0xFF).ToArray();
+            var result = PduBitPackerDemo.PduBitPacker.UnpackBytes(data);
+
+            richTextBox1.AppendText(Encoding.UTF8.GetString(result).ToString());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -110,7 +119,7 @@ namespace CzytnikKart
             //get response
             byte[] g_respone = new byte[] { 0xA0, 0xC0, 0x00, 0x00, 0x0F };
 
-            //se;ect sms
+            //select sms
             byte[] s_sms = new byte[] { 0xA0, 0xA4, 0x00, 0x00, 0x02, 0x6F, 0x3C };
 
             //read record

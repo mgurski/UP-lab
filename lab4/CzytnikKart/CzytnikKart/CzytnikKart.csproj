@@ -55,6 +55,7 @@
     <Compile Include="Czytnik.Designer.cs">
       <DependentUpon>Czytnik.cs</DependentUpon>
     </Compile>
+    <Compile Include="PduBitPacker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Czytnik.resx">
