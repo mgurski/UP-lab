@@ -1,0 +1,20 @@
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\bin\Debug\Modemy Labsony.exe.config
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\bin\Debug\Modemy Labsony.exe
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\bin\Debug\Modemy Labsony.pdb
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.csprojAssemblyReference.cache
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy_Labsony.Form1.resources
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy_Labsony.Properties.Resources.resources
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.csproj.GenerateResource.cache
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.csproj.CoreCompileInputs.cache
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.exe
+C:\Users\lab\source\repos\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.pdb
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\bin\Debug\Modemy Labsony.exe.config
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\bin\Debug\Modemy Labsony.exe
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\bin\Debug\Modemy Labsony.pdb
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.csprojAssemblyReference.cache
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy_Labsony.Form1.resources
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy_Labsony.Properties.Resources.resources
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.csproj.GenerateResource.cache
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.csproj.CoreCompileInputs.cache
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.exe
+C:\Users\lab\Desktop\Modemy Labsony\Modemy Labsony\obj\Debug\Modemy Labsony.pdb
